@@ -11,11 +11,15 @@ git clone https://github.com/hackages/hj-whack-a-mole-reason.git
 
 ## npm
 npm install
-npm run dev
+npm start
+# in another terminal
+npm run bundle
 
 ## yarn
 yarn
-yarn dev
+yarn start
+# in another terminal
+yarn bundle
 ```
 
 ## HackJam
