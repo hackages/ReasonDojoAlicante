@@ -1,5 +1,5 @@
 {
-  "name": "ReasonDojoAlicante",
+  "name": "hj-whack-a-mole-reason",
   "version": "0.0.1",
   "description": "Beyond the frontend",
   "main": "Index.re",
@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "bsb -make-world -w",
+    "dev": "cross-env concurrently -r \"bsb -make-world -w\" \"parcel static/index.html\"",
     "bundle": "parcel static/index.html"
   },
   "dependencies": {
@@ -16,5 +17,9 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "reason-react": "^0.5.3"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0"
   }
 }
