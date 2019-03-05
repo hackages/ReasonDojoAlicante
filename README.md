@@ -1,32 +1,24 @@
-# Reason Dojo Alicante - Más allá del frontend
-
-Nadie aprendió a andar en bicicleta viendo a otras personas pedalear. Las charlas son geniales, pero la realidad es que la mayoría de las personas no retiene toda la información. Aprenderemos manchándonos las manos. La meta de un Reason Dojo es precisamente construir algo en equipos pequeños.
+# HackJam Whack a mole in Reason
 
 ## Editor Setup
 
-Vscode recomendado: busca `reason-vscode` (Jared Forsyth)
-
-https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode
+Recommended vscode extension: [reason-vscode](https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode) (Jared Forsyth)
 
 ## Install
 
-```
-git clone https://github.com/IwanKaramazow/ReasonDojoAlicante
+```bash
+git clone https://github.com/hackages/hj-whack-a-mole-reason.git
 
 ## npm
 npm install
-npm start
-# in another terminal
-npm run bundle
+npm run dev
 
 ## yarn
 yarn
-yarn start
-# in another terminal
-yarn bundle
+yarn dev
 ```
 
-## Dojo
+## HackJam
 
 ### 0. Hello world
 
@@ -63,7 +55,8 @@ let make = (~text, _children) => {
 }
 ```
 
-- Add an `onClick` handler that logs `start`
+- Render this `Button` in your `App` component
+- Add an `onClick` handler to the `Button` that logs `start`. **TIP** You can use the `Js.log` function.
 
 ### 2. Build a static version of the board
 
@@ -111,7 +104,7 @@ Although our static version is great, the board should only be rendered as soon 
 
 - At the top of `App.re` define a type state which contains the `score` (int). What is going into our state type? Anything that transitions during the time our app runs. Example: the score increases if a player hits a mole or display the board if the player clicked on the start button.
 
-* **CONCEPT:** Define your state type as a [record](https://reasonml.github.io/docs/es-ES/record)
+* **CONCEPT:** Define your state type as a [record](https://reasonml.github.io/docs/en/record)
 
 ```reason
 type person = {
@@ -125,7 +118,7 @@ let me = {
 };
 ```
 
-- **CONCEPT:** Take a quick look at the documentation about [Variants and Constructors](https://reasonml.github.io/docs/es-ES/variant) and [Pattern Matching](https://reasonml.github.io/docs/es-ES/pattern-matching).
+- **CONCEPT:** Take a quick look at the documentation about [Variants and Constructors](https://reasonml.github.io/docs/en/variant) and [Pattern Matching](https://reasonml.github.io/docs/en/pattern-matching).
 
   ```reason
   type animal =
